@@ -4,11 +4,11 @@ import java.util.ArrayList;
  
 public interface IUserAccountDb 
 { 
-    ArrayList<String> getCityNames(); 
+    boolean isRegistered(String username); 
  
-    boolean register(User user); 
+    boolean register(User user) throws InvalidUserDetailsException; 
  
-    boolean isRegisteredUser(User user); 
+    User getRegisteredUser(String username); 
  
-    boolean isAnExistingUser(User user); 
+    String[] getCityNames(); 
 } 
